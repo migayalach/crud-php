@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+<?php
+  require_once("./view/head/head.php");
+?> 
+
+<a href="/crud/view/user/user.create.php" class="btn btn-primary">Add new user</a>
+
+<?php
+  require_once("./view/head/footer.php");
+?> 
