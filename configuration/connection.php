@@ -14,7 +14,4 @@
         }
       }
   }
-
-  $conection = new Connection();
-  print_r($conection->connect());
 ?>
