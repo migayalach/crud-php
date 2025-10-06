@@ -24,4 +24,14 @@ class UserController
   {
     return ($this->model->index()) ? $this->model->index() : false;
   }
+
+  public function update($id, $name)
+  {
+    return ($this->model->update($id, $name) != false) ? header("Location:user.show.php?id=" . $id) : header("Location:index.php");
+  }
+
+  public function delete($id)
+  {
+    return ($this->model->delete($id)) ? header("Location:index.php") : header("Location:user.show.php?id=" . $id);
+  }
 }
