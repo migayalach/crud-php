@@ -8,7 +8,7 @@ $data = $obj->show($_GET['id']);
 <h2 class="text-center">Detail after registration</h2>
 
 <div class="pb-3">
-  <a href="/crud/index.php" class="btn btn-primary">Return</a>
+  <a href="/crud/view/user/index.php" class="btn btn-primary">Return</a>
   <a href="user.edit.php?id=<?= $data[0] ?>" class="btn btn-success">Update</a>
 
   <!-- Button trigger modal -->
@@ -26,7 +26,7 @@ $data = $obj->show($_GET['id']);
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
-          <a href="user.delete.php?id=<?= $data[0] ?>" class="btn btn-danger">Delete</button>Delete </a>
+          <a href="user.delete.php?id=<?= $data[0] ?>" class="btn btn-danger">Delete</a>
         </div>
       </div>
     </div>
