@@ -29,4 +29,19 @@ class UserModel
     $stament = $this->PDO->prepare("SELECT * FROM username");
     return ($stament->execute()) ? $stament->fetchAll() : false;
   }
+
+  public function update($id, $name)
+  {
+    $stament = $this->PDO->prepare("UPDATE username SET name=:name WHERE id=:id");
+    $stament->bindParam(":name", $name);
+    $stament->bindParam(":id", $id);
+    return ($stament->execute()) ? $id : false;
+  }
+
+  public function  delete($id)
+  {
+    $stament = $this->PDO->prepare("DELETE FROM username WHERE id=:id");
+    $stament->bindParam(":id", $id);
+    return ($stament->execute()) ? true : false;
+  }
 }
